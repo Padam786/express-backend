@@ -5,45 +5,52 @@ const os = require("os");
 const file = "hello.txt";
 const data = " hey i am data";
 
-// for reading files
-fs.readFile(file, { encoding: "utf-8" }, (err, data) => {
-  if (err) console.log(err);
-  else console.log(data);
-});
+console.log(os.tmpdir())
 
 
-//for deleting file
-fs.unlink(file, (err)=> {
-    if(err) console.log(err)
-    else console.log("file deleted")
-})
 
-//for copying file
-fs.copyFile('padam.txt', 'thapa.txt',(err)=>{
-    if(err) console.log(err)
-    else console.log("file copied")
-})
+// fs.writeFile("kingsway.txt", " this is kingsway text", (err) => {
+//   if (err) {
+//     console.log("error", err);
+//   }
+//   console.log("file sucessfully created");
+// });
 
-//for appending new file 
-fs.appendFile('padam.txt', 'hey i am new',(err) => {
-    if(err) console.log(err)
-    else console.log("file appended")
-})
+// // // for reading files
+// fs.readFile(file, { encoding: "utf-8" }, (err, data) => {
+//   if (err) console.log(err);
+//   else console.log(data);
+// });
 
-//for updating file
+// //for deleting file
+// fs.unlink(file, (err) => {
+//   if (err) console.log(err);
+//   else console.log("file deleted");
+// });
 
-fs.readFile('padam.txt', 'utf-8',  (err, data)=>{
-    if(err) console.log(err)
+// // //for copying file
+// fs.copyFile("padam.txt", "thapa.txt", (err) => {
+//   if (err) console.log(err);
+//   else console.log("file copied");
+// });
 
-    const newData = "new data"
+// // //for appending new file
+// fs.appendFile("padam.txt", "hey i am new", (err) => {
+//   if (err) console.log(err);
+//   else console.log("file appended");
+// });
 
-    const replacedata = data.replace(data,newData);
+// //for updating file
 
-    fs.writeFile('padam.txt', replacedata, (err)=>{
-        if(err) console.log(err)
-        else console.log("file updated")
-    })
-})
+// fs.readFile("padam.txt", "utf-8", (err, data) => {
+//   if (err) console.log(err);
 
+//   const newData = "new data";
 
-fs.
+//   const replacedata = data.replace(data, newData);
+
+//   fs.writeFile("padam.txt",  replacedata, (err) => {
+//     if (err) console.log(err);
+//     else console.log("file updated");
+//   });
+// });
